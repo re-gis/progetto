@@ -6,6 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team management menu</title>
     <link rel="stylesheet" href="yourTeam.css" />
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <div class="body">
@@ -40,7 +76,7 @@
                 <li>SWAP PLAYERS</li>
                 <li>TOURNAMENT CALENDER</li>
                 <li>TOURNAMENT RANKING</li>
-                <li>TOURNAMENT RULES INFO</li>
+                <li>TOURNAMENT RULES id="info-modal" INFO</li>
               </ul>
             </div>
           </div>
@@ -187,7 +223,7 @@
                       </td>
                       <td>10</td>
                       <td>
-                        <button class="info-btn">INFO</button>
+                        <button class="info-btn" id="info-modal">INFO</button>
                       </td>
                       <td>
                         <button class="bid-btn">BID</button>
@@ -207,7 +243,7 @@
                       </td>
                       <td>10</td>
                       <td>
-                        <button class="info-btn">INFO</button>
+                        <button class="info-btn" id="info-modal">INFO</button>
                       </td>
                       <td>
                         <button class="bid-btn">BID</button>
@@ -227,7 +263,7 @@
                       </td>
                       <td>10</td>
                       <td>
-                        <button class="info-btn">INFO</button>
+                        <button class="info-btn" id="info-modal">INFO</button>
                       </td>
                       <td>
                         <button class="bid-btn">BID</button>
@@ -247,7 +283,7 @@
                       </td>
                       <td>10</td>
                       <td>
-                        <button class="info-btn">INFO</button>
+                        <button class="info-btn" id="info-modal">INFO</button>
                       </td>
                       <td>
                         <button class="bid-btn">BID</button>
@@ -270,5 +306,42 @@
         </div>
       </div>
     </div>
+
+
+
+    <!-- Modal -->
+
+    <button id="openModalBtn">Open Modal</button>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="closeModalBtn" class="close">&times;</span>
+        <h2>Modal Title</h2>
+        <p>This is the modal content.</p>
+      </div>
+    </div>
+
+   <script>
+  const modal = document.getElementById("modal");
+  const closeModalBtn = document.getElementsByClassName("close")[0];
+  const infoButtons = document.getElementsByClassName("info-btn");
+
+  for (let i = 0; i < infoButtons.length; i++) {
+    console.log(modal)
+    infoButtons[i].addEventListener("click", function () {
+      modal.style.display = "block";
+    });
+  }
+
+  closeModalBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
   </body>
 </html>
