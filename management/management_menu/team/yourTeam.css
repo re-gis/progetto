@@ -431,7 +431,7 @@ tbody {
 
 
 .modal {
-    display: block;
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -560,4 +560,158 @@ tbody {
 .container-body-item>h4>span {
     font-size: 12px !important;
     color: #535050;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.details>.details-right {
+    width: 45%;
+    flex-grow: 1;
+    max-height: 90%;
+    overflow: auto;
+    column-count: 2;
+    column-gap: 20px;
+}
+
+
+.details-bid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.details-bid-sub-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 60%;
+}
+
+.details-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-size: 12px;
+}
+
+
+.details>.details-left {
+    width: 45%;
+}
+
+
+.details-heading {
+    font-size: 12px;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+.details-heading>span {
+    font-size: 12px;
+    font-weight: bolder;
+    color: #535050;
+}
+
+
+.details-container-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-size: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(227, 227, 38);
+    color: #fff;
+    width: 100%;
+}
+
+
+.details-bid-container-amount {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.details-bid-container-amount>h4 {
+    font-size: 12px;
+    font-weight: bolder;
+    color: #535050;
+}
+
+.details-bid-container-amount>input {
+    width: 100%;
+    outline: none;
+    height: 25px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+}
+
+
+.details-bid-container-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+
+.details-bid-container-btn>.submit-btn {
+    width: 30%;
+    background-color: rgb(22, 147, 196);
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    color: #fff;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+.details-bid-container-btn>.cancel-btn {
+    width: 30%;
+    background-color: #535050;
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    color: #fff;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+.swap-btn {
+    width: 100%;
+    background-color: red;
+    border: none;
+    border-radius: 3px;
+    height: 100%;
+    color: #fff;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
 }

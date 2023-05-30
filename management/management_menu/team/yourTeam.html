@@ -40,7 +40,7 @@
                 <li>SWAP PLAYERS</li>
                 <li>TOURNAMENT CALENDER</li>
                 <li>TOURNAMENT RANKING</li>
-                <li>TOURNAMENT RULES id="info-modal" INFO</li>
+                <li>TOURNAMENT RULES INFO</li>
               </ul>
             </div>
           </div>
@@ -154,7 +154,7 @@
               </div>
 
               <!-- if there are players in the team display this -->
-              <div class="table-lay">
+              <div class="table-lay" style="display: none">
                 <table class="table">
                   <div class="table-header">
                     <thead>
@@ -257,6 +257,47 @@
                 </table>
               </div>
 
+              <!-- Table of available players in a team -->
+              <div class="table-lay">
+                <table class="table">
+                  <div class="table-header">
+                    <thead>
+                      <th>ID</th>
+                      <th>ID_PLAYER</th>
+                      <th>NAME_PLAYER</th>
+                      <th>CATEGORIES</th>
+                      <th>VALUE</th>
+                      <th>AUCTION BASIS</th>
+                      <th>AUCTION PRICE</th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                    </thead>
+                  </div>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>
+                        <button class="info-btn" id="info-modal">INFO</button>
+                      </td>
+                      <td>
+                        <button class="swap-btn">SWAP YOUR PLAYER</button>
+                      </td>
+                      <td>
+                        <button class="bid-btn">SELL YOUR PLAYER</button>
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+
               <div class="table-footer">
                 <h4>Showing 1 to 6 out of 6 entries</h4>
                 <div class="pagination-lay">
@@ -310,7 +351,6 @@
               </div>
 
               <div class="info-container-two">
-
                 <div class="container-header">
                   <h4>ROLES</h4>
                 </div>
@@ -340,7 +380,117 @@
               </div>
             </div>
           </div>
-          <div class="details"></div>
+          <div class="details-container">
+            <div class="details-header">
+              <h2>PLAYER STATS</h2>
+            </div>
+            <div class="details">
+              <div class="details-right">
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+                <h4 class="details-heading">HEIGHT: <span>164</span></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="bid-modal" class="modal">
+      <div class="modal-content">
+        <span id="closeModalBtn" class="close">&times;</span>
+        <div class="modal-body">
+          <div class="profile-info">
+            <div class="profile">
+              <img src="../../../assets/profile pic.jpg" alt="" />
+            </div>
+            <div class="profile-data">
+              <div class="info-container-one">
+                <div class="info">
+                  <h4>NAME:</h4>
+                  <h4>Diego Maradona</h4>
+                </div>
+                <div class="info">
+                  <h4>NATIONALITY:</h4>
+                  <h4>Argentina</h4>
+                </div>
+                <div class="info">
+                  <h4>CATEGORY:</h4>
+                  <h4>Attacking Midfielder (AM)</h4>
+                </div>
+                <div class="info">
+                  <h4>MARKET VALUE:</h4>
+                  <h4>25000</h4>
+                </div>
+                <div class="info">
+                  <h4>AUCTION BASIS:</h4>
+                  <h4>12334</h4>
+                </div>
+                <div class="info">
+                  <h4>HIGHEST BID:</h4>
+                  <h4>12990</h4>
+                </div>
+              </div>
+
+              <div class="info-container-two">
+                <div class="container-header">
+                  <h4>ROLES</h4>
+                </div>
+
+                <div class="container-body">
+                  <div class="container-body-item">
+                    <h4>GK: <span>NO</span></h4>
+                    <h4>SW: <span>NO</span></h4>
+                    <h4>CB: <span>NO</span></h4>
+                  </div>
+                  <div class="container-body-item">
+                    <h4>SB: <span>NO</span></h4>
+                    <h4>DM: <span>NO</span></h4>
+                    <h4>WB: <span>NO</span></h4>
+                  </div>
+                  <div class="container-body-item">
+                    <h4>CM: <span>NO</span></h4>
+                    <h4>SM: <span>NO</span></h4>
+                    <h4>AM: <span>YES</span></h4>
+                  </div>
+                  <div class="container-body-item">
+                    <h4>WT: <span>NO</span></h4>
+                    <h4>SS: <span>YES</span></h4>
+                    <h4>CF: <span>NO</span></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="details-bid-container">
+            <div class="details-bid-sub-container">
+              <div class="details-container-header">
+                <span>May 17, 2023 04:35 PM</span>
+              </div>
+              <div class="details-bid-container-amount">
+                <h4>Bid Amount</h4>
+                <input type="text" />
+              </div>
+              <div class="details-bid-container-btn">
+                <button class="submit-btn">Submit</button>
+                <button class="cancel-btn">Cancel</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -363,6 +513,26 @@
       window.addEventListener("click", function (event) {
         if (event.target == modal) {
           modal.style.display = "none";
+        }
+      });
+
+      const modaltwo = document.getElementById("bid-modal");
+      const closeModalBtnTwo = document.getElementsByClassName("close")[0];
+      const bidBtns = document.getElementsByClassName("bid-btn");
+
+      for (let i = 0; i < bidBtns.length; i++) {
+        bidBtns[i].addEventListener("click", function () {
+          modaltwo.style.display = "block";
+        });
+      }
+
+      closeModalBtnTwo.addEventListener("click", function () {
+        modaltwo.style.display = "none";
+      });
+
+      window.addEventListener("click", function (event) {
+        if (event.target == modaltwo) {
+          modaltwo.style.display = "none";
         }
       });
     </script>
