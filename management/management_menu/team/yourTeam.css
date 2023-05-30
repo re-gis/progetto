@@ -428,3 +428,136 @@ tbody {
     font-size: 12px;
     cursor: pointer;
 }
+
+
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 4% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile>img {
+    /* border-radius: 50%; */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile-data {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.info>h4:nth-child(1) {
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.info>h4:nth-child(2) {
+    color: #535050;
+    font-size: 12px;
+}
+
+.info-container-one {
+    height: 100%;
+    width: 50%;
+}
+
+
+.info-container-two {
+    min-height: 100%;
+    width: 40%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #535050;
+}
+
+
+.info-container-two>.container-header {
+    border-bottom: 1px solid #535050;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+
+.info-container-two>.container-body {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.container-body-item {
+    display: flex;
+    gap: 15px;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.container-body-item>h4 {
+    font-size: 8px;
+}
+
+
+.container-body-item>h4>span {
+    font-size: 12px !important;
+    color: #535050;
+}

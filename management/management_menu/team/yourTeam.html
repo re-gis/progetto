@@ -6,42 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team management menu</title>
     <link rel="stylesheet" href="yourTeam.css" />
-    <style>
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.4);
-      }
-
-      .modal-content {
-        background-color: #fff;
-        margin: 10% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-      }
-
-      .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-
-      .close:hover,
-      .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-      }
-    </style>
   </head>
   <body>
     <div class="body">
@@ -307,41 +271,100 @@
       </div>
     </div>
 
-
-
     <!-- Modal -->
-
-    <button id="openModalBtn">Open Modal</button>
 
     <div id="modal" class="modal">
       <div class="modal-content">
         <span id="closeModalBtn" class="close">&times;</span>
-        <h2>Modal Title</h2>
-        <p>This is the modal content.</p>
+        <div class="modal-body">
+          <div class="profile-info">
+            <div class="profile">
+              <img src="../../../assets/profile pic.jpg" alt="" />
+            </div>
+            <div class="profile-data">
+              <div class="info-container-one">
+                <div class="info">
+                  <h4>NAME:</h4>
+                  <h4>Diego Maradona</h4>
+                </div>
+                <div class="info">
+                  <h4>NATIONALITY:</h4>
+                  <h4>Argentina</h4>
+                </div>
+                <div class="info">
+                  <h4>CATEGORY:</h4>
+                  <h4>Attacking Midfielder (AM)</h4>
+                </div>
+                <div class="info">
+                  <h4>MARKET VALUE:</h4>
+                  <h4>25000</h4>
+                </div>
+                <div class="info">
+                  <h4>AUCTION BASIS:</h4>
+                  <h4>12334</h4>
+                </div>
+                <div class="info">
+                  <h4>HIGHEST BID:</h4>
+                  <h4>12990</h4>
+                </div>
+              </div>
+
+              <div class="info-container-two">
+
+                <div class="container-header">
+                  <h4>ROLES</h4>
+                </div>
+
+                <div class="container-body">
+                  <div class="container-body-item">
+                    <h4>GK: <span>NO</span></h4>
+                    <h4>SW: <span>NO</span></h4>
+                    <h4>CB: <span>NO</span></h4>
+                  </div>
+                  <div class="container-body-item">
+                    <h4>SB: <span>NO</span></h4>
+                    <h4>DM: <span>NO</span></h4>
+                    <h4>WB: <span>NO</span></h4>
+                  </div>
+                  <div class="container-body-item">
+                    <h4>CM: <span>NO</span></h4>
+                    <h4>SM: <span>NO</span></h4>
+                    <h4>AM: <span>YES</span></h4>
+                  </div>
+                  <div class="container-body-item">
+                    <h4>WT: <span>NO</span></h4>
+                    <h4>SS: <span>YES</span></h4>
+                    <h4>CF: <span>NO</span></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="details"></div>
+        </div>
       </div>
     </div>
 
-   <script>
-  const modal = document.getElementById("modal");
-  const closeModalBtn = document.getElementsByClassName("close")[0];
-  const infoButtons = document.getElementsByClassName("info-btn");
+    <script>
+      const modal = document.getElementById("modal");
+      const closeModalBtn = document.getElementsByClassName("close")[0];
+      const infoButtons = document.getElementsByClassName("info-btn");
 
-  for (let i = 0; i < infoButtons.length; i++) {
-    console.log(modal)
-    infoButtons[i].addEventListener("click", function () {
-      modal.style.display = "block";
-    });
-  }
+      for (let i = 0; i < infoButtons.length; i++) {
+        infoButtons[i].addEventListener("click", function () {
+          modal.style.display = "block";
+        });
+      }
 
-  closeModalBtn.addEventListener("click", function () {
-    modal.style.display = "none";
-  });
+      closeModalBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
 
-  window.addEventListener("click", function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  });
-</script>
+      window.addEventListener("click", function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>
