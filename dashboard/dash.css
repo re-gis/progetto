@@ -85,6 +85,11 @@ li>a {
 }
 
 
+.body-child:hover {
+    background-color: #ccc;
+}
+
+
 @media screen and (min-width: 768px) {
     .body-child {
         width: 80%;
