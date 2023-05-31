@@ -241,7 +241,6 @@ li>a {
 .body-main-right-content-items-container {
     display: flex;
     flex-direction: column;
-    /* gap: 10px; */
     padding: 10px;
     max-height: 200px;
     overflow-y: scroll;
@@ -252,9 +251,16 @@ li>a {
 .body-main-right-content-items-container>h4 {
     cursor: pointer;
     padding: 10px;
+    background-color: red;
 }
 
 .body-main-right-content-items-container>h4:hover {
     background-color: rgb(61, 150, 218);
     color: #fff;
+}
+
+
+.body-container-two {
+    border: 1px solid #ccc;
+    background-color: red;
 }
