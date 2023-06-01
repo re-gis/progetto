@@ -14,11 +14,12 @@
   <body>
     <div class="body">
       <div class="header">
-        <div class="user_dash">
-          <h1>TOURNMENT MANAGEMENT</h1>
+        <div id="header" class="user_dash">
+          <h1>USER DASHBOARD</h1>
         </div>
-        <div class="nav">
-          <ul>
+        <div id="nav" class="nav">
+          <i id="item" onclick="handleShow()" class="fas fa-bars"></i>
+          <ul class="list" id="list">
             <li><a href="home.php">Home</a></li>
             <li><a href="about.php">About</a></li>
             <li>Welcome D Regis</li>
@@ -33,7 +34,7 @@
         <div class="body-lay-content">
           <div class="body-lay-table">
             <div class="body-lay-table-header">
-              <div class="selections">
+              <div class="selections" id="entries">
                 <span>Show</span>
                 <select name="entries" id="entries">
                   <option value="one">10</option>
@@ -51,9 +52,10 @@
                 <span>entries</span>
               </div>
 
-              <div class="search-input">
+              <i id="search" style="display: none;" onclick="handleSearch()" class="fas fa-search search"></i>
+              <div  class="search-input">
                 <label for="search">Search: </label>
-                <input type="text" />
+                <input id="input" type="text" />
               </div>
             </div>
             <div class="table-lay">
@@ -79,7 +81,7 @@
                     <td>2</td>
                     <td>3</td>
                     <td>5</td>
-                    <td>
+                    <td class="table-btn">
                       <h4 class="full-note">OPEN</h4>
                     </td>
                     <td>6</td>
@@ -88,7 +90,7 @@
                     <td>9</td>
                     <td>10</td>
                     <td>11</td>
-                    <td>
+                    <td class="table-btns">
                       <button class="info-btn">INFO</button>
                       <button class="sub-btn">MANAGE</button>
                     </td>
@@ -98,7 +100,7 @@
                     <td>2</td>
                     <td>3</td>
                     <td>4</td>
-                    <td>
+                    <td class="table-btn">
                       <button class="btn-to-open">70 days to open</button>
                     </td>
                     <td>6</td>
@@ -107,7 +109,7 @@
                     <td>9</td>
                     <td>10</td>
                     <td>11</td>
-                    <td>
+                    <td class="table-btns">
                       <button class="info-btn">INFO</button>
                       <button class="close-btn">CLOSED</button>
                     </td>
@@ -127,5 +129,41 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const handleShow = () => {
+        const item = document.getElementById("list");
+        const header = document.getElementById("header");
+        const nav = document.getElementById("nav");
+
+        if (header.style.display !== "none") {
+          header.style.display = "none";
+          item.style.display = "flex";
+          nav.style.display = "flex";
+          nav.style.gap = "20px";
+          nav.style.justifyContent = "space-between";
+          nav.style.alignItems = "center";
+          item.style.gap = "5px";
+        } else {
+          header.style.display = "block";
+          nav.style.alignItems = "center";
+          item.style.display = "none";
+        }
+      };
+
+      const handleSearch = () => {
+        const search = document.getElementById("search");
+        const entries = document.getElementById("entries");
+        const searchInput = document.getElementById("input");
+
+        if(entries.style.display !== 'none') {
+          entries.style.display = 'none'
+          searchInput.style.display = 'block'
+        } else {
+          entries.style.display = 'block'
+          searchInput.style.display = 'none'
+        }
+      };
+    </script>
   </body>
 </html>

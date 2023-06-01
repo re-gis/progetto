@@ -49,6 +49,31 @@ li>a {
     text-decoration: none;
 }
 
+.nav>ul>li:hover {
+    text-decoration: underline;
+}
+
+.nav>i{
+    display: none;
+    cursor: pointer;
+}
+
+
+.nav>i:hover {
+    color: #ccc;
+} 
+
+
+@media screen and (max-width: 768px) {
+    .nav>ul {
+        display: none;
+    }
+
+    .nav>i {
+        display: block;
+    }
+}
+
 
 .body-lay {
     /* display: flex;
