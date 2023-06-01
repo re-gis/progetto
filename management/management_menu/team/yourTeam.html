@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team management menu</title>
     <link rel="stylesheet" href="yourTeam.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <div class="body">
       <div class="header">
-        <div class="user_dash">
-          <h1>TOURNMENT MANAGEMENT</h1>
+        <div id="header" class="user_dash">
+          <h1>USER DASHBOARD</h1>
         </div>
-        <div class="nav">
-          <ul>
+        <div id="nav" class="nav">
+          <i id="item" onclick="handleShow()" class="fas fa-bars"></i>
+          <ul class="list" id="list">
             <li><a href="home.php">Home</a></li>
             <li><a href="about.php">About</a></li>
             <li>Welcome D Regis</li>
@@ -293,7 +298,42 @@
                         <button class="bid-btn">SELL YOUR PLAYER</button>
                       </td>
                     </tr>
-                    
+                    <tr>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>
+                        <button class="info-btn" id="info-modal">INFO</button>
+                      </td>
+                      <td>
+                        <button class="swap-btn">SWAP YOUR PLAYER</button>
+                      </td>
+                      <td>
+                        <button class="bid-btn">SELL YOUR PLAYER</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>
+                        <button class="info-btn" id="info-modal">INFO</button>
+                      </td>
+                      <td>
+                        <button class="swap-btn">SWAP YOUR PLAYER</button>
+                      </td>
+                      <td>
+                        <button class="bid-btn">SELL YOUR PLAYER</button>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -535,6 +575,26 @@
           modaltwo.style.display = "none";
         }
       });
+
+      const handleShow = () => {
+        const item = document.getElementById("list");
+        const header = document.getElementById("header");
+        const nav = document.getElementById("nav");
+
+        if (header.style.display !== "none") {
+          header.style.display = "none";
+          item.style.display = "flex";
+          nav.style.display = "flex";
+          nav.style.gap = "20px";
+          nav.style.justifyContent = "space-between";
+          nav.style.alignItems = "center";
+          item.style.gap = "5px";
+        } else {
+          header.style.display = "block";
+          nav.style.alignItems = "center";
+          item.style.display = "none";
+        }
+      };
     </script>
   </body>
 </html>

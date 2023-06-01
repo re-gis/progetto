@@ -32,6 +32,7 @@ body {
     font-size: 8px;
 }
 
+
 .nav>ul {
     display: flex;
     gap: 20px;
@@ -49,7 +50,60 @@ li>a {
     text-decoration: none;
 }
 
+.nav>ul>li:hover {
+    text-decoration: underline;
+}
 
+
+.body-content-top-center {
+    overflow-y: scroll;
+}
+
+.body-content-top-center::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.nav>i {
+    display: none;
+    cursor: pointer;
+}
+
+
+.nav>i:hover {
+    color: #ccc;
+}
+
+
+.search {
+    display: none;
+    cursor: pointer;
+}
+
+.search:hover {
+    color: #535050;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .nav>ul {
+        display: none;
+    }
+
+    .body-main-right {
+        display: none !important;
+    }
+
+    .body-main-left {
+        width: 100% !important;
+    }
+
+    .nav>i {
+        display: block;
+        padding-right: 10px;
+    }
+}
 
 
 
@@ -70,7 +124,6 @@ li>a {
     width: 100%;
     border: none;
     border-radius: 2px;
-    overflow-y: auto;
 }
 
 .body-lay-header {
@@ -89,7 +142,13 @@ li>a {
     background-color: #fff;
     padding-top: 20px;
     padding-bottom: 20px;
+    overflow-y: scroll;
 }
+
+.body-lay-table::-webkit-scrollbar {
+    width: 0;
+}
+
 
 .body-lay-header>h4 {
     font-weight: bolder;
@@ -108,6 +167,12 @@ li>a {
     color: #535050;
 }
 
+
+@media screen and (max-width: 420px) {
+    .selections {
+        display: none !important;
+    }
+}
 
 select {
     outline: none;
@@ -133,6 +198,7 @@ table {
 .table-lay {
     overflow-y: scroll;
 }
+
 
 
 @media screen and (max-width:800px) {
@@ -163,11 +229,27 @@ td {
     width: 100%;
     align-items: center;
     justify-content: center;
-    display: flex;
 }
 
 thead {
     border-bottom: 2px solid #535050;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    tr {
+        height: 70px !important;
+    }
+
+    .info-btn {
+        width: 100% !important;
+    }
+
+    .sub-btn {
+        width: 100% !important;
+        margin-top: 5px !important;
+    }
 }
 
 tbody {

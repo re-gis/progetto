@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swap PLayers</title>
     <link rel="stylesheet" href="./swapPlayers.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <div class="user_dash">
-          <h1>TOURNMENT MANAGEMENT</h1>
+        <div id="header" class="user_dash">
+          <h1>TOURNAMENT MANAGEMENT</h1>
         </div>
-        <div class="nav">
-          <ul>
+        <div id="nav" class="nav">
+          <i id="item" onclick="handleShow()" class="fas fa-bars"></i>
+          <ul class="list" id="list">
             <li><a href="home.php">Home</a></li>
             <li><a href="about.php">About</a></li>
             <li>Welcome D Regis</li>
@@ -348,7 +353,7 @@
             <h4>PLUS ONE MONEY PART OF</h4>
             <div class="modal-body-three-content">
               <input type="text" />
-              <div>
+              <div class="transfer-details-btns">
                 <button class="submit-btn">Submit</button>
                 <button class="cancel-btn">Cancel</button>
               </div>
@@ -378,6 +383,26 @@
           modal.style.display = "none";
         }
       });
+
+      const handleShow = () => {
+        const item = document.getElementById("list");
+        const header = document.getElementById("header");
+        const nav = document.getElementById("nav");
+
+        if (header.style.display !== "none") {
+          header.style.display = "none";
+          item.style.display = "flex";
+          nav.style.display = "flex";
+          nav.style.gap = "20px";
+          nav.style.justifyContent = "space-between";
+          nav.style.alignItems = "center";
+          item.style.gap = "5px";
+        } else {
+          header.style.display = "block";
+          nav.style.alignItems = "center";
+          item.style.display = "none";
+        }
+      };
     </script>
   </body>
 </html>

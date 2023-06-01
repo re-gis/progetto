@@ -50,12 +50,119 @@ li>a {
     text-decoration: none;
 }
 
+.nav>ul>li:hover {
+    text-decoration: underline;
+}
+
+
+.body-content-top-center {
+    overflow-y: scroll;
+}
+
+.body-content-top-center::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.nav>i {
+    display: none;
+    cursor: pointer;
+}
+
+
+.nav>i:hover {
+    color: #ccc;
+}
+
+
+.search {
+    display: none;
+    cursor: pointer;
+}
+
+.search:hover {
+    color: #535050;
+}
+
+
+@media screen and (min-width: 1000px) {
+    .body-content {
+        gap: 0% !important;
+    }
+
+    .body-content-top {
+        height: 55% !important;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav>ul {
+        display: none;
+    }
+
+    .nav>i {
+        display: block;
+        padding-right: 10px;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .body-content-top-header {
+        flex-direction: column !important;
+        gap: 10px;
+    }
+}
+
+
+@media screen and (max-width: 520px) {
+
+    .body-content-top-header {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    .selections {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 370px) {
+
+    .body-content-top-header {
+        flex-direction: column !important;
+        gap: 30px;
+    }
+
+    .selections {
+        display: none !important;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 850px) {
+    .menu {
+        display: none !important;
+    }
+
+    .body-lay {
+        display: flex;
+        justify-content: center;
+    }
+}
 
 .body-lay {
     padding: 5px;
     display: flex;
     gap: 5%;
-    height: 92%;
+    height: 90%;
 }
 
 .menu {
@@ -490,6 +597,43 @@ tbody {
     flex-direction: column;
 }
 
+
+@media screen and (max-width: 850px) {
+    .modal-content {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+        width: 60% !important;
+    }
+
+    .transfer-details-btns {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
+
+@media screen and (max-width: 370px) {
+    .modal-content {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+        width: 70% !important;
+    }
+
+    .transfer-details-btns {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
 
 .profile {
     display: flex;

@@ -49,6 +49,96 @@ li>a {
     text-decoration: none;
 }
 
+.nav>ul>li:hover {
+    text-decoration: underline;
+}
+
+
+.body-content-top-center {
+    overflow-y: scroll;
+}
+
+.body-content-top-center::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.nav>i {
+    display: none;
+    cursor: pointer;
+}
+
+
+.nav>i:hover {
+    color: #ccc;
+}
+
+
+.search {
+    display: none;
+    cursor: pointer;
+}
+
+.search:hover {
+    color: #535050;
+}
+
+
+@media screen and (max-width: 300px) {
+    .body-header {
+        display: flex;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+    .body-header {
+        gap: 10px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .body-header {
+        display: flex;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .body-content {
+        gap: 0% !important;
+    }
+
+    .body-content-top {
+        height: 55% !important;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav>ul {
+        display: none;
+    }
+
+    .body-main-right {
+        display: none !important;
+    }
+
+    .body-main-left {
+        width: 100% !important;
+    }
+
+    .nav>i {
+        display: block;
+        padding-right: 10px;
+    }
+}
+
+
 
 .body-lay {
     padding: 5px;
@@ -166,6 +256,13 @@ li>a {
     height: 100%;
     display: flex;
     justify-content: space-between;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+
+.body-main::-webkit-scrollbar {
+    width: 0;
 }
 
 
@@ -183,6 +280,12 @@ li>a {
     display: flex;
     flex-direction: column;
     width: 60%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+.body-main-left::-webkit-scrollbar {
+    width: 0;
 }
 
 
@@ -464,6 +567,67 @@ tbody:last-child {
     flex-direction: column;
 }
 
+
+
+
+
+@media screen and (min-width: 850px) {
+    .modal-content {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+        width: 80% !important;
+    }
+
+    .transfer-details-btns {
+        display: flex !important;
+        /* flex-direction: column !important; */
+        gap: 10px !important;
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
+
+
+@media screen and (max-width: 850px) {
+    .modal-content {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+        width: 70% !important;
+    }
+
+    .transfer-details-btns {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
+
+@media screen and (max-width: 370px) {
+    .modal-content {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+        width: 70% !important;
+    }
+
+    .transfer-details-btns {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
 .modal-content>span {
     text-align: right;
 }
@@ -572,7 +736,7 @@ tbody:last-child {
 
 .cancel-btn {
     width: 100%;
-    background-color:#535050;
+    background-color: #535050;
     border: none;
     border-radius: 3px;
     color: #fff;
@@ -583,4 +747,15 @@ tbody:last-child {
 
 .submit-btn:hover {
     background-color: rgb(48, 171, 219);
+}
+
+@media screen and (max-width: 850px) {
+    .menu {
+        display: none !important;
+    }
+
+    .body-lay {
+        display: flex;
+        justify-content: center;
+    }
 }
